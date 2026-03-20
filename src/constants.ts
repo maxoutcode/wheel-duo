@@ -1,0 +1,7 @@
+export const DEFAULT_ROTATIONS = 6;
+export const DEFAULT_DURATION_MS = 5000;
+export const DEFAULT_OVERSHOOT_DEG = 15;
+export const DEFAULT_RETURN_DURATION_MS = 750;
+export const DEFAULT_SWAY_AMPLITUDE_DEG = 6;
+export const DEFAULT_SWAY_PERIOD_MS = 1500;
+export const WARM_UP_DURATION_MS = 64;

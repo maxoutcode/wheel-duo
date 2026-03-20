@@ -24,20 +24,23 @@ $ yarn add wheel-duo
 
 &#10148; **Import**
 ```javascript
-import WheelDuo from 'wheel-duo';
+import { WheelDuo } from 'wheel-duo';
+import type { WheelDuoOptions } from 'wheel-duo';
 ```
 <br>
 
 &#10148; **Usage**
 ```javascript
-const wheelDuo = new WheelDuo({
+const options: WheelDuoOptions = {
   rootSelector: '.wheel-container',
   firstWheelSelector: '.wheel-segments-one',
   secondWheelSelector: '.wheel-segments-two',
   triggerSelector: '.wheel-trigger',
   targetAngles: [180, 270],
   callback: () => console.log('Spin complete'),
-});
+};
+
+const wheelDuo = new WheelDuo(options);
 
 wheelDuo.init();
 ```
@@ -50,7 +53,7 @@ wheelDuo.init();
 | `rootSelector`        |                 `string`                  |   `–`   | Root container element selector.                              |
 | `firstWheelSelector`  |                 `string`                  |   `–`   | Selector for the first (top) wheel.                           |
 | `secondWheelSelector` |                 `string`                  |   `–`   | Selector for the second (bottom) wheel.                       |
-| `triggerSelector`     |                 `string`                  |   `–`   | Selector for the trigger button that initiates spinning.      |
+| `triggerSelector`     |                 `string`                  |   `–`   | Selector for trigger element that handles `click` (`button`, `div`, `a`, etc). |
 | `targetAngles`        |            `[number, number]`             |   `–`   | Final rotation angles (degrees) for each wheel.               |
 | `rotations`           |                 `number`                  |   `6`   | Full 360° rotations before reaching target angle.             |
 | `duration`            |                 `number`                  | `5000`  | Duration of the spin animation (ms).                          |
